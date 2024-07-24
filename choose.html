@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+       <link rel="icon"
+    href="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1eTNseHMzODd5MmFxaDEybWd2dnM3dXA2bm9yeWdzNGxjd3hqdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dBvUmroCOaAgd7UKOZ/giphy.gif" 
+    type="image/x-icon" 
+    >
+    <title>Travel with AI</title>
+    <link rel="stylesheet" href="choose1.css">
+</head>
+<body>
+    <div id="welcome-animation" class="welcome-animation">
+        <h1>Welcome to Travel with AI</h1>
+    </div>
+
+    <div class="container">
+        <h1>Travel Plan Generator</h1>
+        
+        <div class="form-group">
+            <label for="budget">Budget:</label>
+            <select id="budget">
+                <option value="Luxury">Luxury</option>
+                <option value="Mid-Range">Mid-Range</option>
+                <option value="Budget">Budget</option>
+                <option value="Economical">Economical</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="interests">Interests:</label>
+            <select id="interests">
+                <option value="Beach Relaxation">Beach Relaxation</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Culture and History">Culture and History</option>
+                <option value="Nature and Scenery">Nature and Scenery</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="duration">Travel Duration:</label>
+            <select id="duration">
+                <option value="Short Weekend">Short Weekend</option>
+                <option value="One Week">One Week</option>
+                <option value="Two Weeks">Two Weeks</option>
+                <option value="Three Weeks">Three Weeks</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="climate">Climate and Weather:</label>
+            <select id="climate">
+                <option value="Warm and Sunny">Warm and Sunny</option>
+                <option value="Cold and Snowy">Cold and Snowy</option>
+                <option value="Mild and Pleasant">Mild and Pleasant</option>
+                <option value="Tropical and Humid">Tropical and Humid</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="companions">Travel Companions:</label>
+            <select id="companions">
+                <option value="Family">Family</option>
+                <option value="Friends">Friends</option>
+                <option value="Partner">Partner</option>
+                <option value="Solo">Solo</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="activities">Activities and Attractions:</label>
+            <select id="activities">
+                <option value="Adventure Sports">Adventure Sports</option>
+                <option value="Historical Sites">Historical Sites</option>
+                <option value="Wildlife">Wildlife</option>
+                <option value="Urban Exploration">Urban Exploration</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="safety">Safety and Health:</label>
+            <select id="safety">
+                <option value="Safe and Well-Developed">Safe and Well-Developed</option>
+                <option value="Developing Countries">Developing Countries</option>
+                <option value="Low Crime Rates">Low Crime Rates</option>
+                <option value="Health Precautions">Health Precautions</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="accommodation">Accommodation and Amenities:</label>
+            <select id="accommodation">
+                <option value="Luxury">Luxury</option>
+                <option value="Mid-Range">Mid-Range</option>
+                <option value="Budget">Budget</option>
+                <option value="Unique Stays">Unique Stays</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="culture">Cultural and Language Differences:</label>
+            <select id="culture">
+                <option value="English-Speaking">English-Speaking</option>
+                <option value="Popular Tourist Destinations">Popular Tourist Destinations</option>
+                <option value="Language Learning Opportunity">Language Learning Opportunity</option>
+                <option value="Cultural Immersion">Cultural Immersion</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="transportation">Accessibility and Transportation:</label>
+            <select id="transportation">
+                <option value="Well-Connected Cities">Well-Connected Cities</option>
+                <option value="Remote Locations">Remote Locations</option>
+                <option value="Car Rentals">Car Rentals</option>
+                <option value="Local Transportation">Local Transportation</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cuisine">Local Cuisine:</label>
+            <select id="cuisine">
+                <option value="Foodie Destinations">Foodie Destinations</option>
+                <option value="Street Food">Street Food</option>
+                <option value="Fine Dining">Fine Dining</option>
+                <option value="Local Specialties">Local Specialties</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="goals">Personal Goals:</label>
+            <select id="goals">
+                <option value="Relaxation">Relaxation</option>
+                <option value="Adventure and Growth">Adventure and Growth</option>
+                <option value="Cultural Enrichment">Cultural Enrichment</option>
+                <option value="Social Connections">Social Connections</option>
+            </select>
+        </div>
+
+        <button onclick="generatePlan()">Generate Travel Plan</button>
+        
+        <div id="result">
+            <h2>Your Travel Plan:</h2>
+            <p id="plan">Select your preferences and click "Generate Travel Plan" to see your customized itinerary.</p>
+        </div>
+    </div>
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTI1bjFzbnZ4YWxjdTdzaWxxMG1vdDlyaHliemo4OWF3eGVlaHNxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oOylMv2oLDxcxGzYn6/giphy.gif" alt="Sparkles Emoji" height="100px" class="spar" >
+    
+
+    <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
+
+    <!-- Chatbot window -->
+    <div class="chatbot-window" id="chatbotWindow">
+        <iframe src="http://127.0.0.1:3000/c:/Users/MSI/Desktop/chek/chat.html"></iframe>
+    </div>
+
+
+    <script src="choose2.js"></script>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About</h2>
+            <p>Travel with AI is your trusted companion for all travel planning needs, utilizing the power of artificial intelligence to make your journeys smooth and memorable.</p>
+        </div>
+        <div class="footer-section follow-us">
+            <h2>Follow Us</h2>
+            <a href="https://www.facebook.com/" class="social-icon">Facebook</a><br>
+            <a href="https://twitter.com/"> <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWtseG93eHgyeGRzYm50am0zZ2JmejhkMDgxd3J0aDMzc2Vwc3piZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/kZgt83SyhP2sy2U3h6/giphy.webp" alt="Sparkles Emoji" height="50px"></a><br>
+            <a href="https://www.instagram.com/" class="social-icon">Instagram</a><br>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:support@travelwithai.com">support@travelwithai.com</a></p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 The Moon St, HAY tadhamon City, World</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Travel with AI. All Rights Reserved.
+    </div>
+</footer>
+
+
+</html>

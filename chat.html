@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Integration</title>
+    <link rel="stylesheet" href="chat1.css">
+</head>
+<body>
+
+
+    
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTI1bjFzbnZ4YWxjdTdzaWxxMG1vdDlyaHliemo4OWF3eGVlaHNxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oOylMv2oLDxcxGzYn6/giphy.gif" alt="Sparkles Emoji" height="100px" alt="ChatBot" class="chatbot-icon">
+            <div class="chatbot-title">BAT_BOT</div>
+            <button class="chatbot-close" onclick="toggleChatbot()">✖</button>
+        </div>
+        <div class="chatbot-content" id="chat-box">
+            <p>Hello there! 👋 It's nice to meet you!</p>
+            <p>What brings you here today? Please ask me anything about Travel with AI.</p>
+
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message here">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <script src="chat2.js"></script>
+</body>
+</html>
+
+
+

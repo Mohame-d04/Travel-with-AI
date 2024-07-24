@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+    href="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1eTNseHMzODd5MmFxaDEybWd2dnM3dXA2bm9yeWdzNGxjd3hqdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dBvUmroCOaAgd7UKOZ/giphy.gif" 
+    type="image/x-icon" 
+    >
+    <title>Travel with AI</title>
+    <link rel="stylesheet" href="signup1.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="Motion design _ graphic white Background FREE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <form class="signup-form">
+            <h1>Sign Up</h1>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            
+            <button type="button" onclick="validateAndRedirect()">Register</button>
+        </form>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('welcome-animation').style.display = 'none';
+            }, 5000); // Duration should be slightly more than the animation time
+        };
+
+        function validateAndRedirect() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!email) {
+                alert("Please enter an email address.");
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (!password) {
+                alert("Please enter a password.");
+                return;
+            }
+
+            window.location.href = 'http://127.0.0.1:3000/c:/Users/MSI/Desktop/Projet/choose.html';
+        }
+
+    </script>
+</body>
+</html>

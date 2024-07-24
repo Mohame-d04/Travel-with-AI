@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fin1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+       <link rel="icon"
+    href="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1eTNseHMzODd5MmFxaDEybWd2dnM3dXA2bm9yeWdzNGxjd3hqdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dBvUmroCOaAgd7UKOZ/giphy.gif" 
+    type="image/x-icon" 
+    >
+    <title>Travel with AI</title>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXR1eTNseHMzODd5MmFxaDEybWd2dnM3dXA2bm9yeWdzNGxjd3hqdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dBvUmroCOaAgd7UKOZ/giphy.gif" alt="fire" width="40" height="40"><div class="titre"> <h3>Travel with AI</h3></div>
+        <div class="nav-links">
+            <li class="menu-item"> 
+                <a class='hello'>FAQ</a> 
+                <ul class="submenu">
+                    <li><a href="#">Basic information</a></li>
+                    <li><a href="faq.html">Most common questions</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a class='hello'>About Us</a>          
+                <ul class="submenu">
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="offer.html">What We Offer</a></li>
+                    <li><a href="vision.html">Our Vision</a></li>
+                    <li><a href="comi.html">Our Commitment</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+            <a class='hello'>Setings</a>    
+                <ul class="submenu">
+                    <li><a href="http://127.0.0.1:3000/c:/Users/MSI/Desktop/Projet/pop.html" >Contact Us</a></li>
+                    <li><a href="#">More Info</a></li>
+                </ul>
+            </li>
+        </div>
+    </header>
+    
+    <script>
+        $(document).ready(function() {
+            $('.menu-item').hover(
+                function() {
+                    $(this).find('.submenu').slideDown(500);
+                },
+                function() {
+                    $(this).find('.submenu').slideUp(500);
+                }
+            );
+        });
+    </script>
+    
+    <main>
+        <img src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/2728.gif" alt="Sparkles Emoji" height="50px" class="spar">
+        <h1>Welcome to Travel with AI</h1> 
+        
+        
+        <p>
+            <h3> the World with Artificial Intelligence</h3>
+            At Travel with AI, we're redefining the way you experience travel. Our innovative platform combines the<br>
+            power of artificial intelligence with the thrill of exploration, offering personalized travel recommendations,<br> 
+            itineraries, and insights tailored just for you.</p>
+        <div class="buttons">
+            <a href="sign.html" class="button">Sign In</a>
+            <br>
+            <a href="signup.html" class="button">Sign Up</a>
+        </div>
+    </main>
+
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTI1bjFzbnZ4YWxjdTdzaWxxMG1vdDlyaHliemo4OWF3eGVlaHNxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oOylMv2oLDxcxGzYn6/giphy.gif" alt="Sparkles Emoji" height="100px" class="spar" >
+    
+
+    <button class="chatbot-button" onclick="toggleChatbot()">💬</button>
+
+    <!-- Chatbot window -->
+    <div class="chatbot-window" id="chatbotWindow">
+        <iframe src="http://127.0.0.1:3000/c:/Users/MSI/Desktop/chek/chat.html"></iframe>
+    </div>
+    <script src="fin2.js"></script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+
+.chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    width: 329px;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.chatbot-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chatbot-title {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.chatbot-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chatbot-content p {
+    margin: 0 0 10px;
+}
+
+.chatbot-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chatbot-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+}
+
+.chatbot-btn:hover {
+    background-color: #000000;
+}
+
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.chatbot-input input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.chatbot-input button {
+    background-color: #2b2d2e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #3e3f41;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: black;
+    align-self: flex-start;
+}
